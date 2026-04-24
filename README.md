@@ -14,17 +14,13 @@ This project was developed as an **AI Engineer Case Study** and demonstrates pra
 
 Instead of pruning weights after training, each weight is assigned a learnable gate:
 
-[
-\text{gates} = \sigma(\text{gate_scores}) \in (0,1)
-]
+```text
+gates = sigmoid(gate_scores) ∈ (0,1)
 
-[
-\text{pruned_weights} = W \odot \text{gates}
-]
+pruned_weights = W ⊙ gates
 
-[
-\text{output} = X \cdot \text{pruned_weights}
-]
+output = X · pruned_weights
+```
 
 Where:
 
